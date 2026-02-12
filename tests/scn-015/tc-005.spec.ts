@@ -15,9 +15,9 @@ test('test', async ({ page }) => {
   await page.goto('https://d3i0qiuq3enr0s.cloudfront.net/login');
   await page.getByRole('button', { name: 'Sign in with Google' }).click();
   await page.getByRole('textbox', { name: 'Email or phone' }).click();
-  await page.getByRole('textbox', { name: 'Email or phone' }).fill('66160103@go.buu.ac.th');
+  await page.getByRole('textbox', { name: 'Email or phone' }).fill('');
   await page.getByRole('button', { name: 'Next' }).click();
-  await page.getByRole('textbox', { name: 'Enter your password' }).fill('denteen0830163615.');
+  await page.getByRole('textbox', { name: 'Enter your password' }).fill('');
   await page.getByRole('button', { name: 'Next' }).click();
   await page.getByRole('button', { name: 'Open Menu' }).click();
   await page.getByRole('link', { name: 'จัดการสาขา' }).click();
