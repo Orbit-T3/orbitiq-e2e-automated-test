@@ -1,5 +1,16 @@
 import { test, expect } from '@playwright/test';
 
+/**
+ * SCN-015-TC-006: ค้นหาสาขาด้วย รหัสสาขา
+ * Test Steps:
+ * 1. ไป หน้าจัดการสาขา
+ * 2. ค้นหา MXP-0005
+ * Expected Result: 
+ * - ระบบแสดงเฉพาะสาขาที่ชื่อ "MXP-0005" ในผลการค้นหา
+ * - ไม่แสดงสาขาอื่นที่รหัสสาขาไม่ตรง
+ * - ไม่พบ Error
+ */
+
 test('test', async ({ page }) => {
   await page.goto('https://d3i0qiuq3enr0s.cloudfront.net/login');
   await page.getByRole('button', { name: 'Sign in with Google' }).click();

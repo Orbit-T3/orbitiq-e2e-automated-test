@@ -1,5 +1,16 @@
 import { test, expect } from '@playwright/test';
 
+/**
+ * SCN-015-TC-007: ค้นหาสาขาด้วย รหัสไปรษณีย์
+ * Test Steps:
+ * 1. ไป หน้าจัดการสาขา
+ * 2. ค้นหา 20131
+ * Expected Result: 
+ * - ระบบแสดงเฉพาะสาขาที่มีรหัสไปรษณีย์ "20131"
+ * - สาขาที่มีรหัสไปรษณีย์ต่างจาก "20131" จะไม่ถูกแสดง
+ * - ไม่พบ Error
+ */
+
 test('test', async ({ page }) => {
   await page.goto('https://d3i0qiuq3enr0s.cloudfront.net/login');
   await page.getByRole('button', { name: 'Sign in with Google' }).click();

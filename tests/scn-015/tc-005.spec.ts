@@ -1,5 +1,16 @@
 import { test, expect } from '@playwright/test';
 
+/**
+ * SCN-015-TC-005: ค้นหาสาขาด้วย ชื่อสาขา
+ * Test Steps:
+ * 1. ไป หน้าจัดการสาขา
+ * 2. ค้นหา My Express บางแสน สาขา 6
+ * Expected Result: 
+ * - ระบบแสดงเฉพาะสาขาที่ชื่อ "My Express บางแสน สาขา 6"
+ * - ไม่แสดงสาขาอื่นที่ชื่อไม่ตรง
+ * - ไม่พบ Error
+ */
+
 test('test', async ({ page }) => {
   await page.goto('https://d3i0qiuq3enr0s.cloudfront.net/login');
   await page.getByRole('button', { name: 'Sign in with Google' }).click();
